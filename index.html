@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
+    <meta name="Author" content="Waly.D">
+   
+    <div class="logo">
+        <center><img src="Untitled design.png" alt=" Dioufy Teranga Salon & Beauty Emporium" width="400"></center>
+    </div>
+
+
+
+
+    <title> Dioufy Teranga Salon & Beauty Emporium</title>
+
+
+
+
+    <style>
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0eedafd;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+
+
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+
+
+
+        p {
+            color: #090000;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+
+
+
+        button {
+            display: block;
+            margin: 20px auto;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+
+
+        .video-item {
+            margin: 10px;
+        }
+
+
+
+
+        video {
+            width: 200px;
+        }
+   
+        table {
+            width: 100%;
+            margin-top: 20px;
+            color: #fff;
+        }
+
+
+        table,
+        th,
+        td {
+            border: 1px solid #fff;
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+
+
+        th {
+            background-color: #007bff;
+        }
+
+
+        tr:nth-child(even) {
+            background-color: #1c0f3fb1;
+        }
+
+
+        tr:nth-child(odd) {
+            background-color: #3f379db1;
+        }
+   
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+
+        .video-item {
+            margin: 10px;
+            animation: flipInX 1s ease-out;
+        }
+
+
+        video {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+        @keyframes flipInX {
+            from {
+                transform: perspective(400px) rotateX(90deg);
+                opacity: 0;
+            }
+            40% {
+                transform: perspective(400px) rotateX(-20deg);
+            }
+            60% {
+                transform: perspective(400px) rotateX(10deg);
+            }
+            80% {
+                transform: perspective(400px) rotateX(-5deg);
+            }
+            to {
+                transform: perspective(400px);
+                opacity: 1;
+            }
+        }
+
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link {
+    margin: 0 10px;
+}
+
+.social-link-window {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.social-link-window:hover {
+    transform: scale(1.1);
+}
+
+.social-link-window img {
+    width: 80px;
+    height: 80px;
+}
+
+   </style>
+
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+    <div class="container">
+
+
+
+
+        <h1><b>Welcome to Dioufy Teranga Salon & Beauty Emporium!</b></h1>
+        <p id="statement">
+            <i>🌟 Bienvenue chez Dioufy Teranga Salon & Beauty Emporium ! 🌟<br>
+            Chez Dioufy Teranga, nous croyons au pouvoir transformateur de la beauté. Niché au cœur vibrant du Sénégal, en
+            Afrique de l'Ouest, notre salon est bien plus qu'un endroit pour se faire coiffer ou maquiller - c'est un
+            sanctuaire où la beauté rencontre la culture, et où chaque client est traité avec chaleur, respect et
+            l'hospitalité sénégalaise légendaire connue sous le nom de "teranga".
+        </p>
+
+
+
+
+        <button onclick="translateStatement()">Translate</button>
+
+
+
+
+        <!-- Video elements -->
+       
+
+    </div>
+
+
+
+
+    <script>
+        function translateStatement() {
+            var statement = document.getElementById("statement");
+
+
+
+
+            if (statement.innerHTML.includes("Bienvenue")) {
+                statement.innerHTML = `🌟 Welcome to  Dioufy Teranga Salon & Beauty Emporium! 🌟<br>
+                At Teranga Globe, we believe in the transformative power of beauty. Nestled in the vibrant heart of Senegal, West Africa, our salon is more than just a place to get your hair styled or your makeup done – it's a sanctuary where beauty meets culture, and where every client is treated with warmth, respect, and the legendary Senegalese hospitality known as "teranga".`;
+            } else {
+                statement.innerHTML = `🌟 Bienvenue chez Dioufy Teranga Salon & Beauty Emporium ! 🌟<br>
+                Chez Dioufy Teranga , nous croyons au pouvoir transformateur de la beauté. Niché au cœur vibrant du Sénégal, en Afrique de l'Ouest, notre salon est bien plus qu'un endroit pour se faire coiffer ou maquiller - c'est un sanctuaire où la beauté rencontre la culture, et où chaque client est traité avec chaleur, respect et l'hospitalité sénégalaise légendaire connue sous le nom de "teranga".`;
+            }
+        }
+    </script>
+
+
+
+
+<div>
+
+
+
+
+<h4> <b>Types De Coiffures</b> </h4>
+<ul>
+    <li> Senegalese Twists</li>
+    <li> Box Braids </li>
+    <li>Fulani Braids</li>
+    <li> Cornrows</li>
+    <li> DreadLocks</li>
+
+
+
+
+</ul>
+<div>
+   
+    <div class="video-container">
+        <div class="video-item">
+            <video src="23948ea3-577c-4d26-98b8-da2cf0ddc57f.MP4" controls autoplay loop muted width="500"></video>
+        </div>
+        <div class="video-item">
+            <video src="bc83de16-024b-4c0e-b38c-e0f5404b8896.MP4" controls autoplay loop muted width="500"></video>
+        </div>
+        <div class="video-item">
+            <video src="d94afbed-0247-4ca4-add8-f35baa18094f.MP4" controls autoplay loop muted width="500"></video>
+        </div>
+        <div class="video-item">
+            <video src="dac54aaf-289b-4ffe-b2af-9acc4979e3e6.MP4" controls autoplay loop muted width="500"></video>
+        </div>
+        <div class="video-item">
+            <video src="e6945cb4-559e-4e2a-beea-099a10f2918e.MP4" controls autoplay loop muted width="500"></video>
+        </div>
+        <div class="video-item">
+            <video src="f6f9976d-3b41-4265-b14a-b966b7c925f5.MP4" controls autoplay loop muted width="500"></video>
+        </div>
+    </div>
+    
+    
+   
+    <div>
+<h4> <b>Service ++</b> </h4>
+<ul>
+    <li> Lavage chevelure( Hair Conditioner, and Moisturized Shampoo) sous Rendez-vous</li>
+    <li>Maintenance Chevelure-Personalisable sous conseil( Creme applicante,et Serum)</li>
+    <li> Lissage de cheveux</li>
+    <li>Hair checking</li>
+</ul>
+<div>
+
+
+
+
+<div>
+<h4> <b>Store Products</b> </h4>
+<ul>
+
+
+
+
+    <li> To be annouced...</li>
+
+
+
+
+</ul>
+<div>
+
+    <h4><i>Our Social Media Links</i></h4>
+    <h6>🌟 Prenez le temps de visiter nos resaux sociaux pour etre a jour des actualites de Dioufy Teranga!</h6>
+    <div class="social-links">
+        <a href="https://facebook.com/yourpage" class="social-link">
+            <div class="social-link-window">
+                <img src="Facebook_Logo_(2019).png" alt="Facebook">
+            </div>
+        </a>
+        <a href="https://twitter.com/yourpage" class="social-link">
+            <div class="social-link-window">
+                <img src="Logo_of_Twitter.svg.png" alt="Twitter">
+            </div>
+        </a>
+        <a href="https://instagram.com/yourpage" class="social-links">
+            <div class="social-link-window"> 
+                <img src="Instagram_icon.png.webp" alt="instagram">
+
+            </div>
+        </a>
+    </div>
+    
+
+    <div class="blog-section">
+    <h2>latest trends & New arrivals</h2>
+    <p>🌟Restez à jour avec notre blog pour connaître les derniers conseils en matière de soins capillaires et les tendances en matière de coiffure.🌟</p>
+    <a href="blog.html" class="btn">Discover More</a>
+</div>
+
+<div>
+
+<form class="newsletter-form">
+    <input type="email" placeholder="Enter your email">
+    <button type="submit">Subscribe</button>
+</form>
+ </div>
+
+   
+   
+   
+   
+ <h4><i>🌟Pour avoir vos demandes traité dans vos délais de préférences, il est préférable de placer un rendez-vous 24h à l'avance!🌟</i></h4>
+ <h3>Note: Pour placer un rendez-vous veuillez utiliser le lien ci-dessous via email ou via notre numéro de téléphone (Appel ou texto)</h3>
+ <a href="mailto:dioufyteranga@gmail.com" class="btn">Placez votre Rendez-vous</a>
+ <h4><b>* Ici notre numéro téléphonique: 000-000-000</b></h4>
+   
+
+
+
+    <div class="open-hours">
+        <h3>Heures de disponibilités</h3>
+        <table>
+            <tr>
+                <th>Jour</th>
+                <th>Heures d'ouverture</th>
+            </tr>
+            <tr>
+                <td>Dimanche</td>
+                <td>10h - 18h</td>
+            </tr>
+            <tr>
+                <td>Lundi</td>
+                <td>Fermé</td>
+            </tr>
+            <tr>
+                <td>Mardi</td>
+                <td>10h - 18h</td>
+            </tr>
+            <tr>
+                <td>Mercredi</td>
+                <td>10h - 18h</td>
+            </tr>
+            <tr>
+                <td>Jeudi</td>
+                <td>10h - 18h</td>
+            </tr>
+            <tr>
+                <td>Vendredi</td>
+                <td>10h - 18h</td>
+            </tr>
+            <tr>
+                <td>Samedi</td>
+                <td>10h - 18h</td>
+            </tr>
+        </table>
+    </div>
+
+
+</div>
+
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form action="dioufw29@gmail.com" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+</body>
+
+<hr>
+
+<footer>
+    <p> <center>Business name: Dioufy Teranga <br> email: <a href="mailto:dioufyteranga@gmail.com">dioufyteranga@gmail.com</a> <br> Address: Dakar, SN 10700 <br> Phone number: 000-000-000</center></p>
+</footer>
+
+
+
+</html>
